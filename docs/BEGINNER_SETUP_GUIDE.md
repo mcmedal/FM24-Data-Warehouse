@@ -305,22 +305,37 @@ Once your pipeline is loaded, the web app is your main interface. You don't need
 
 Ready to analyze your own club and scouting targets?
 
-### Step 1: Export Data from Football Manager 24
-1. In FM24, go to your **Squad** screen.
-2. Click any player, press **`Ctrl + A`** (or `Cmd + A` on Mac) to select all players.
-3. Press **`Ctrl + P`** (or click the FM menu $\to$ **Print**).
-4. Select **Web Page (*.html)** and name it `team_players.html`.
-5. Repeat for your Goalkeepers (`team_gks.html`) and your Scouting pool (`interested_out_players1.html`, `interested_gks.html`).
-   *(For full column layouts, see the [FM Export Guide](docs/FM_EXPORT_GUIDE.md))*.
+### Step 1: Import the Pre-Configured Views into FM24 (1-Click)
+Instead of searching and ordering dozens of statistics manually, this project includes ready-to-import view files (`.fmf`) in the [`fm24 views/`](file:///fm24%20views/) folder!
 
-### Step 2: Place the Files in the `documents/` Folder
-Drop your exported `.html` or `.csv` files into the `documents/` folder in the project directory.
+1. Open Football Manager 2024 and go to your **Squad** or **Scouting $\to$ Players** screen.
+2. Click the **Views** dropdown menu (top-left above the player list, where it says "General Info").
+3. Select **Custom** $\to$ **Import View...**
+4. Browse to the `fm24 views/` folder in the project and select the view you need:
+   - **`Team O.Player View.fmf`** $\to$ For your outfield squad players
+   - **`Team GK View.fmf`** $\to$ For your squad's goalkeepers
+   - **`O.Player View.fmf`** $\to$ For scouted outfield targets
+   - **`GK View.fmf`** $\to$ For scouted goalkeepers
+5. Click **Load**. All 30+ columns will appear in the exact order required by the database!
 
-### Step 3: Re-Run the Pipeline
+### Step 2: Export Data from Football Manager 24
+1. With the imported view active, click any player row and press **`Ctrl + A`** (or `Cmd + A` on Mac) to select all players.
+2. Press **`Ctrl + P`** (or click the FM menu $\to$ **Print**).
+3. Select **Web Page (*.html)** and name your file:
+   - Squad outfield players: `team_players.html`
+   - Squad goalkeepers: `team_gks.html`
+   - Scouted outfield players: `interested_out_players1.html`
+   - Scouted goalkeepers: `interested_gks.html`
+   *(For full details, see the [FM Export Guide](docs/FM_EXPORT_GUIDE.md))*.
+
+### Step 3: Place the Files in the `documents/` Folder
+Move or copy your exported `.html` (or `.csv`) files into the [`documents/`](file:///documents) folder inside the project.
+
+### Step 4: Re-Run the Pipeline
 - **Windows:** In PowerShell, run `powershell -ExecutionPolicy Bypass -File .\run_pipeline_docker.ps1`
 - **Mac / Linux:** In Terminal, run `./prepare_data.sh` (or `./run_pipeline_docker.sh`)
 
-Refresh **[http://localhost:3000](http://localhost:3000)** — your own squad and targets are now live!
+Refresh **[http://localhost:3000](http://localhost:3000)** — your own club and scouted targets are now live in the web app!
 
 ---
 

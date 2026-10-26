@@ -16,7 +16,7 @@ This documentation suite covers every aspect of the data platform, from raw game
 | **[Data Dictionary](docs/DATA_DICTIONARY.md)** | Full schema catalog covering all tables, views, columns, data types, business definitions, keys, and nullability constraints. | Analytics Engineers, SQL Developers |
 | **[Metrics & Similarity Mathematics](docs/METRICS_AND_SIMILARITY.md)** | Deep mathematical formulation of scale-weighted Euclidean distance, finishing delta shrinkage, tactical archetypes, and per-90 metrics. | Football Analysts, Scout Researchers |
 | **[Pipeline Runbook & Operations](docs/PIPELINE_RUNBOOK.md)** | Step-by-step setup, database creation, execution orchestration, ad-hoc scouting procedures, automated testing, and troubleshooting. | Database Administrators, Users |
-| **[FM24 Data Export Guide](docs/FM_EXPORT_GUIDE.md)** | Practical walkthrough on setting up custom views in FM24, exporting CSV/HTML data, file placements, and configuring for any club/save. | Football Manager Players |
+| **[FM24 Data Export Guide](docs/FM_EXPORT_GUIDE.md)** | Practical walkthrough on importing pre-configured `.fmf` views in FM24, exporting CSV/HTML data, and zero-effort setup for any club. | Football Manager Players |
 | **[Python Analytics & Dashboard](docs/PYTHON_ANALYTICS.md)** | CLI documentation for `scouting_dashboard.py`, generating radar charts, Moneyball scatter plots, and CSV recruitment shortlists. | Data Scientists, End Users |
 | **[🌐 Interactive Web Application](webapp/README.md)** | Full-stack Next.js app with FBref reports, Opta pizza charts, similarity engines, and TradingView screener. | Scouts, Analysts, End Users |
 

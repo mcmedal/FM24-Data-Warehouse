@@ -24,7 +24,7 @@ Comprehensive technical, analytical, and operational documentation is available 
 | **[📖 Data Dictionary & Catalog](docs/DATA_DICTIONARY.md)** | Full schema catalog covering all tables, views, columns, data types, business definitions, keys, and nullability constraints. |
 | **[📐 Metrics & Similarity Mathematics](docs/METRICS_AND_SIMILARITY.md)** | Mathematical formulation of scale-weighted Euclidean distance, finishing shrinkage, tactical archetypes, and per-90 metrics. |
 | **[🚀 Pipeline Runbook & Operations](docs/PIPELINE_RUNBOOK.md)** | Step-by-step setup, database creation, execution orchestration, ad-hoc scouting procedures, automated testing, and troubleshooting. |
-| **[🎮 FM24 Data Export Guide](docs/FM_EXPORT_GUIDE.md)** | Practical walkthrough on setting up custom views in FM24, exporting CSV/HTML data, file placements, and configuring for any club/save. |
+| **[🎮 FM24 Data Export Guide](docs/FM_EXPORT_GUIDE.md)** | Practical walkthrough on importing pre-configured `.fmf` views in FM24, exporting CSV/HTML data, and zero-effort setup for any club. |
 | **[🐍 Python Analytics & Dashboard](docs/PYTHON_ANALYTICS.md)** | CLI documentation for `scouting_dashboard.py`, generating radar charts, Moneyball scatter plots, and CSV recruitment shortlists. |
 | **[🌐 Web Analytics Application](webapp/README.md)** | Full Next.js webapp documentation: Opta pizza charts, FBref scouting reports, TradingView quant screener, and 1-click startup. |
 
@@ -324,6 +324,11 @@ football-manager-warehouse-project/
 │   ├── PIPELINE_RUNBOOK.md             # Deployment, execution & troubleshooting
 │   ├── FM_EXPORT_GUIDE.md              # In-game FM24 view setup & export guide
 │   └── PYTHON_ANALYTICS.md             # Python CLI, radar charts & scatter plots
+├── fm24 views/                         # Pre-configured in-game FM24 view files (.fmf) for 1-click import
+│   ├── GK View.fmf                     # Scouting Goalkeeper view
+│   ├── O.Player View.fmf               # Scouting Outfield Player view
+│   ├── Team GK View.fmf                # Squad Goalkeeper view
+│   └── Team O.Player View.fmf          # Squad Outfield Player view
 ├── documents/                          # Raw FM24 CSV exports (teams and targets)
 ├── python scripts/
 │   ├── prepare_ingestion.py            # Steam Proton / Wine automated pre-processor & deduplicator
